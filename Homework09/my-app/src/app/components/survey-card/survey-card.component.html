@@ -1,0 +1,10 @@
+<!-- Styling reference: https://material.angular.io/components/card/examples -->
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{question}}</mat-card-title>
+        <mat-icon>question_answer</mat-icon>
+        <mat-card-subtitle>Choose your best answer, from {{minValue}} to {{maxValue}} {{units}}.</mat-card-subtitle>
+    </mat-card-header>
+    <!-- thumbLabel 4 sliders: https://www.concretepage.com/angular-material/angular-material-slider#thumbLabel -->
+    <mat-slider thumbLabel min="{{minValue}}" max="{{maxValue}}" step="{{units}}" value="1" (change)="sliderChanged($event)"></mat-slider>
+</mat-card>
