@@ -1,0 +1,28 @@
+// Styling reference: https://material.angular.io/components/card/examples 
+// Modifying the preset card content
+
+.mat-icon {
+    margin-left: auto;
+}
+
+mat-card {
+    border: 2px solid cornflowerblue;
+    border-radius: 20px;
+    margin: 5px;
+    max-width: 40vw;
+    min-width: 400px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(128, 22, 177);
+}
+
+// Not sure how you were able to make the slide yellow, but tried many things from stackoverflow with no success
+// this produced anger
+mat-slider {
+    width: 100%;
+    color: "primary";
+    // background-color: rgb(255, 243, 79) !important;
+}
+
+mat-card-subtitle {
+    color: rgb(255, 255, 255);
+}
