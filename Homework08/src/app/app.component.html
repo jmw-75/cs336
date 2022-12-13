@@ -1,0 +1,35 @@
+<h1>
+  Guess the Square Root Game
+</h1>
+
+<div>
+  <label> Guess the sqrt() of </label>
+  <input type="text" [(ngModel)]="target" />
+  <label> within </label>
+  <input type="text" [(ngModel)]="accuracy" />
+  <label> % </label>
+  <br />
+</div>
+
+<div>
+  <button (click)="randomNum()">Generate random number</button>
+</div>
+
+<hr />
+
+<div>
+  <!-- Feedback builds and breaks after each output -->
+  <label *ngFor="let msg of feedback"> {{msg}} <br /> </label>
+</div>
+
+<!-- First If when incorrect, second when guess is 'correct' -->
+<div *ngIf="!correct">
+  <label> Enter your guess: </label>
+  <input type="text" [(ngModel)]="inputNum" (keyup.enter)="submit()" />
+</div>
+
+<div *ngIf="correct">
+  <label>You guessed it in {{count}} attempts!</label>
+  <br />
+  <button (click)='newGame()'>Try Again?</button>
+</div>

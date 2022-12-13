@@ -1,0 +1,57 @@
+/* John White
+ * CS336 Calvin University
+ * Project07
+ * CSS stylesheet for the index.html provided by Professor Norman */
+
+* {
+    border: 0px solid red;
+}
+
+/* for making .card
+    reference: https://www.w3schools.com/CSSref/pr_grid.php
+    multiple sections for grid, grip-column-gap, grip-... +more */
+.card {
+    display: grid;
+    grid-template-areas: 
+        'image title'
+        'image subtitle'
+        'image button';
+    grid-column-gap: 25vmax;
+    grid-gap: .25vmax;
+    width: 40vmax;
+}
+
+.logo-div {
+    grid-area: image;    
+    height: 12vmax;
+    width: 12vmax;
+}
+
+.logo {
+    height: 12vmax;
+    width: 12vmax;
+}
+
+/* how to shadow a box: https://www.w3schools.com/CSSref/css3_pr_box-shadow.php */
+.shadowed {
+    box-shadow: .4vmax .4vmax .4vmax #888888;
+    border-radius: .75vmax;
+}
+
+.title {
+    grid-area: title;    
+    font-size: 4.0vmax;
+}
+
+.subtitle {
+    grid-area: subtitle;
+    font-size: 2.0vmax;
+    color: rgb(173, 169, 169);
+}
+
+.find-more-btn {
+    grid-area: button;    
+    font-size: 2.0vmax;
+    color: rgb(255, 255, 255);
+    background-color: rgb(34, 159, 32);
+}
