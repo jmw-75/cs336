@@ -17,12 +17,18 @@ export class SurveyCardComponent implements OnInit {
   @Input() units?: string;
 
   @Output() result: EventEmitter<any> = new EventEmitter();
+<<<<<<< HEAD
   // to get myAns to show, you need to give values to the sliders
   @Output() myAns: EventEmitter<number> = new EventEmitter<number>();
 
   public sliderChanged(event: any) {
     console.log(this.result);
     this.myAns = event.value;
+=======
+
+  public sliderChanged(event: any) {
+    console.log(this.result);
+>>>>>>> 127bd25311dff489da79e4ceeab43cf0be79940d
     this.result.emit(event.value);
   }
 

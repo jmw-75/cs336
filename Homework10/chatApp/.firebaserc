@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "chatapp-4c408": {
+      "hosting": {
+        "chatApp": [
+          "chatapp-4c408"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "chatapp-4c408"
+  }
+}

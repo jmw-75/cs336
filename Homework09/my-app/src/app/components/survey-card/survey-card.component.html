@@ -6,7 +6,11 @@
         <mat-card-subtitle>Choose your best answer, from {{minValue}} to {{maxValue}} {{units}}.</mat-card-subtitle>
     </mat-card-header>
     <!-- thumbLabel 4 sliders: https://www.concretepage.com/angular-material/angular-material-slider#thumbLabel -->
+<<<<<<< HEAD
     <mat-slider thumbLabel="True" min="{{minValue}}" max="{{maxValue}}" 
         step="{{units}}" value="curVal" (change)="sliderChanged($event)"></mat-slider>
     <mat-card-subtitle>Your answer: {{myAns}} </mat-card-subtitle>
+=======
+    <mat-slider thumbLabel min="{{minValue}}" max="{{maxValue}}" step="{{units}}" value="1" (change)="sliderChanged($event)"></mat-slider>
+>>>>>>> 127bd25311dff489da79e4ceeab43cf0be79940d
 </mat-card>

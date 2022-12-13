@@ -1,0 +1,31 @@
+<header>
+  <h1>Chat App :)</h1>
+  <span>Enter your handle/name: </span>
+  <input type="text" [(ngModel)]="userName" (ngModelChange)="saveName()" />
+  <span> Pick a color for your posts: </span>
+  <input
+    [(colorPicker)]="color"
+    [style.background]="color"
+    (colorPickerChange)="saveColor()"
+  />
+</header>
+
+<div>
+  <hr />
+
+  <div *ngFor="let msgTxt of messageRecArray">
+    <span id="message-date">{{
+      msgTxt.timestamp.toDate() | date: "medium"
+    }}</span>
+    <span [style.color]="msgTxt.color"> {{ msgTxt.message }}</span>
+  </div>
+  <br />
+  Enter a message:
+  <input
+    type="text"
+    (keyup.enter)="sendMessage()"
+    [(ngModel)]="message"
+    [style.color]="color"
+  />
+  <button (click)="sendMessage()">Send</button>
+</div>
